@@ -5,13 +5,11 @@ RUN apk --update add git ca-certificates curl && rm -rf /var/cache/apk/*
 ARG VERSION
 WORKDIR /app
 
-COPY . /go/src/github.com/arkan/cloudflare-ddns
+COPY . /go/src/github.com/beacloudgenius/cloudflare-ddns
 
-WORKDIR /go/src/github.com/arkan/cloudflare-ddns
+WORKDIR /go/src/github.com/beacloudgenius/cloudflare-ddns
 
 RUN go get -v ./... && \
 	go build ./cmd/cloudflare-ddns
 
 CMD /go/bin/cloudflare-ddns
-
-

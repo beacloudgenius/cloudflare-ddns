@@ -3,8 +3,8 @@ package main
 import (
 	"os"
 
-	"github.com/Sirupsen/logrus"
-	cloudflare "github.com/arkan/cloudflare-ddns"
+	"github.com/sirupsen/logrus"
+	cloudflare "github.com/beacloudgenius/cloudflare-ddns"
 )
 
 func main() {
